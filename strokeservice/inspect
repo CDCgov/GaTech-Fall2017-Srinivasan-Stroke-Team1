@@ -1,0 +1,142 @@
+[
+    {
+        "Id": "sha256:699210806a7ba5fc1976cd236a3ff39179a7d440e3bd6a74d2b062f689f0ced3",
+        "RepoTags": [
+            "iivanov8/fhirdb:latest"
+        ],
+        "RepoDigests": [],
+        "Parent": "sha256:654f3975daa18f505fcde9e56ca4c0a4b0a268b5bbe81058fd419605998f77ff",
+        "Comment": "",
+        "Created": "2017-11-21T18:32:16.618186734Z",
+        "Container": "b46030774d4d4f3071d52a42d936e05bcd3f424efc70b73d940a514822037f2f",
+        "ContainerConfig": {
+            "Hostname": "b46030774d4d",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PGDATA=/var/lib/postgresql/pgdata",
+                "POSTGRES_USER=postgres",
+                "POSTGRES_DB=fhir",
+                "affinity:container==cd55d90e843b4288e366822c16cd651baec72c67311cbe6a6a901467f26b85fa",
+                "no_proxy=*.local, 169.254/16",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/9.3/bin",
+                "GOSU_VERSION=1.10",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=9.3",
+                "PG_VERSION=9.3.19-1.pgdg80+1"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) COPY file:005eb5813912f55101de6693a4bfdbd0c261f377a434ca15fcf21f7f349ff339 in /docker-entrypoint-initdb.d/ "
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:654f3975daa18f505fcde9e56ca4c0a4b0a268b5bbe81058fd419605998f77ff",
+            "Volumes": {
+                "/docker-entrypoint-initdb.d": {},
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": [],
+            "Labels": {
+                "com.docker.compose.config-hash": "8b520d9129243b4f23f6447e9c99a0d344986835c912dfc2d8346c9b38126b3d",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "traineeproceduralproficiency",
+                "com.docker.compose.service": "postgres",
+                "com.docker.compose.version": "1.16.1"
+            }
+        },
+        "DockerVersion": "1.13.1",
+        "Author": "",
+        "Config": {
+            "Hostname": "b46030774d4d",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PGDATA=/var/lib/postgresql/pgdata",
+                "POSTGRES_USER=postgres",
+                "POSTGRES_DB=fhir",
+                "affinity:container==cd55d90e843b4288e366822c16cd651baec72c67311cbe6a6a901467f26b85fa",
+                "no_proxy=*.local, 169.254/16",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/9.3/bin",
+                "GOSU_VERSION=1.10",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=9.3",
+                "PG_VERSION=9.3.19-1.pgdg80+1"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "ArgsEscaped": true,
+            "Image": "sha256:654f3975daa18f505fcde9e56ca4c0a4b0a268b5bbe81058fd419605998f77ff",
+            "Volumes": {
+                "/docker-entrypoint-initdb.d": {},
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": [],
+            "Labels": {
+                "com.docker.compose.config-hash": "8b520d9129243b4f23f6447e9c99a0d344986835c912dfc2d8346c9b38126b3d",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "traineeproceduralproficiency",
+                "com.docker.compose.service": "postgres",
+                "com.docker.compose.version": "1.16.1"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 2317208843,
+        "VirtualSize": 2317208843,
+        "GraphDriver": {
+            "Name": "aufs",
+            "Data": null
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:c01c63c6823dd8a296c2134ea94d31121069f1c52f8f8789836bc7ea2e5cdc93",
+                "sha256:f900a7cb8fa0e52e19f3c8177796ae12477d0fb2a37a1a23b46601d76f8e235d",
+                "sha256:d376c26454792b2ee88d2a4ddc5f19238b26ad9fadbad745325721216862c6f4",
+                "sha256:007748c889fcc01a91388379a2ea1b5a282c7350442e2448ed1be10bc0aa7f1a",
+                "sha256:b713f281bbda553255d887b5843416ca9018a8eea28d71f374bf00c15a9e3e5c",
+                "sha256:38ac14e86d82af8f6290f26b0c87df8de3ab6c0f442de1b49173d84fe823a875",
+                "sha256:838aca161f0e2ef6da0256560d33feea4d13a73ca6d01a2d5a55a3215961c3f5",
+                "sha256:0aea8a548c0ce3fa5790ed6001386317703e2240457135bf76fa88adc2b6ebd8",
+                "sha256:c0454cfcfd036e79d39b404d573c847226b5a652b9a3b41ddb9e7fbacc37c7ff",
+                "sha256:6d22d0df5ab4fa330bc728523e33f5d76b601e6f0328791f25872d4ace96d123",
+                "sha256:b49749333145fd2e02c1027216c69fa48e3b0ac6cfffe663ff7e1aa7667a93de",
+                "sha256:f765531dc04e5bd7c969d5df7c9148e08da5bf43682ca69d07864ee2cb3f70a8",
+                "sha256:75220a49a39f3280e327acc2daeeb2247658e285045c79aa7eef18d959ac75e1",
+                "sha256:cd94d43d720f1d5b4d683dae47369f27490370868f3a80821c56db24a46b4754",
+                "sha256:cd5b662f739489da009db546d0a9b1ff88b9041c743f8d9b3f94f1ceb599096e",
+                "sha256:f12028f5fe99bfe2cdda2e6d04825e4a28024199cb192d0b8c1ebe282e255aac"
+            ]
+        }
+    }
+]

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <meta charset="utf-8" />
+    <title>CDC-Post-Discharge APP</title>
+    
+    <link rel="stylesheet" href="lib/script/json-formatter/json-formatter.min.css" />
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
+    
+    <!-- <link rel="stylesheet" href="lib/script/angular-material/1.1.0/angular-material.min.css" /> -->
+    <link rel="stylesheet" href="css/angular-datepicker.min.css" />
+    <link rel="stylesheet" href="css/rzslider.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    
+  </head>
+  
+  <body ng-app="strokeApp" ng-controller="MainController" data-ng-init="init()" style="line-height: 0px;">
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" style="margin-bottom:0px;">
+    	<div class="navbar-inner" style="margin-bottom:0px">
+	        <div class="container">
+	        	<img class="brand" src="images/ms_logo.png" width="150px" height="75px">
+   				<ul class="nav navbar-nav pull-right" ng-show="isSignedIn()">
+   					<li>
+			        	<a>
+			        		<span class="glyphicon glyphicon-user " aria-hidden="true"></span> <span style="font-size:1.2em;">{{username}}</span>
+			        	</a>
+   					</li>
+   					<li>
+   						<a href="#/" ng-click=logout()>
+   							<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Sign out
+   						</a>
+   					</li>
+   				</ul>
+	        </div>
+        
+    		<div class="container">
+    			<span class="navbar-brand">CDC Post Discharge Stroke Patient Data Reporting Application</span>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="container">
+		<div ng-view></div>
+	</div>
+    
+    <script src="lib/script/jquery-3.1.1.min.js"></script>
+    <script src="lib/script/angular/1.5.8/angular.min.js"></script>
+    <script src="lib/script/angular/1.5.8/angular-route.min.js"></script>
+    <script src="lib/script/angular/1.5.8/angular-cookies.min.js"></script>
+	<script src="lib/script/angular/1.5.8/angular-sanitize.min.js"></script>
+	<script src="lib/script/angular/1.5.8/angular-animate.min.js"></script>
+    
+    <script src="lib/script/rzslider.min.js"></script>
+    <script src="lib/script/angular-datepicker.min.js"></script>
+    <script src="lib/script/underscore-min.js"></script>
+	<script src="lib/script/ng-file-upload-12.2.13.min.js"></script>
+	<script src="lib/script/ui-bootstrap-tpls-2.3.0.min.js"></script>
+	<script src="lib/script/json-formatter/json-formatter.min.js"></script>
+        
+    <script src="app.js"></script>
+    <script src="modules/login/LoginController.js"></script>
+    <script src="modules/home/HomeController.js"></script>
+    <script src="modules/questionnaire/QuestionnaireController.js"></script>
+    <script src="modules/admin/AdminController.js"></script>
+    
+  </body>
+
+</html>
