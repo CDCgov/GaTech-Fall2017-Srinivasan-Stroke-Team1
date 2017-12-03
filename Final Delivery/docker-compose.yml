@@ -1,0 +1,35 @@
+#http://localhost:8080/baseDstu3/Patient?_pretty=true
+#http://localhost:8080/baseDstu3/ValueSet?_pretty=true
+#http://localhost:8080/baseDstu3/Patient/2341
+
+#curl -H "Content-Type: application/json" -X POST -d '{ "resourceType": "Patient", "id": "32754", "meta": { "versionId": "50", "lastUpdated": "2017-11-14T10:24:22.403-05:00" }, "language": "zh-TW", "text": { "status": "generated", "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> <table class=\"hapiPropertyTable\"> <tbody/> </table> </div>" } }' http://localhost:8080/baseDstu3/Patient
+
+
+
+version: '2.1'
+
+services:
+   strokeapp_db:
+      image: postgres:9.5-alpine
+      restart: always
+      ports:
+         - 5432:5432
+      environment:
+          POSTGRES_DB: strokeapp
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+      healthcheck:
+         test: ["CMD-SHELL", "pg_isready -p 5432 -U postgres"]
+         interval: 3s
+         timeout: 30s
+         retries: 35
+
+   web:
+      image: iivanov8/strokeapp
+      restart: always
+      ports:
+         - 8888:8888
+      depends_on:
+         strokeapp_db:
+           condition: service_healthy
+
